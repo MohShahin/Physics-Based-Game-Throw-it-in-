@@ -36,12 +36,8 @@ When the app is fully developed, it will change the world by encouraging users t
 ## Initial Concept Images
 
 **Start page**  
-![START PAGE](vision-images/start.png)
+![image](https://github.com/MohShahin/Physics-Based-Game-Throw-it-in-/assets/99323462/9f539c7a-48cf-4ad2-a6a9-5062163c6b04)
 
-**Begin practice**  
-![ENTER PRACTICE](vision-images/practice1.png)  
-![PRACTICE IMAGE](vision-images/practice2.png)  
-![END PRACTICE](vision-images/practice3.png)
 
 **Practice ended, return to start page**  
 ![start (1)](https://github.com/MohShahin/Physics-Based-Game-Throw-it-in-/assets/99323462/70bee3a6-87bc-4e9e-b824-37f2792b6efa)
