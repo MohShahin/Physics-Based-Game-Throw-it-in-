@@ -1,0 +1,257 @@
+/* make content fit on screen */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex; /* Added this line */
+  align-items: center; /* Added this line */
+  justify-content: center; /* Added this line */
+}
+
+.fullscreenBtn {
+  top: 92%;
+  left: 87.68%;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Added this line */
+  height: 100%; /* changed vh -> % */
+  width: 100%; /* Added this line */
+
+}
+
+/* Makes game take up *most* of the screen */
+/* left room for buttons for visibility, can be adjusted */
+#canvas-container {
+  width: 100%;
+  height: 90%;
+ 
+  /*Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+
+  /*Center contents horizontally */
+  text-align: center;
+
+
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  border: 2px dashed grey;
+}
+
+
+.canvas1 {
+  background: linear-gradient(0deg, #c0b6d3, #e2deeb, #c0b6d3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* scoreboard -----------------------------------------*/
+
+.scoreboard {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  left: 0%;
+  top: 0%;
+  background-color: lightgray;
+}
+
+.points {
+  padding: 10px;
+  text-align: center;
+}
+
+.level {
+  padding: 10px;
+  text-align: center;
+}
+
+.time {
+  padding: 10px;
+  text-align: center;
+}
+
+.points,
+.level,
+.time {
+  font-size: 1.25em;
+  height: 20px;
+  color: black;
+}
+
+/* ball selection menu -----------------------------------------*/
+
+/* removed .ballButtonContainer */
+/* added class for all buttons instead */
+.buttonSize {
+  width: 10%;
+  height: 3rem; /* You can adjust this value if needed */
+}
+
+.list {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #362162;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(0.875rem - 1px) calc(1.5rem - 1px);
+  position: absolute;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  left: 5%;
+}
+
+.list:hover,
+.list:focus {
+  background-color: #503a7c;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.list:hover {
+  transform: translateY(-1px);
+}
+
+.list:active {
+  background-color: #362162;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+/* positions each button */
+.tennisBtn {
+  top: 92%;
+  left: 2%;
+}
+
+.basketballBtn {
+  top: 92%;
+  left: 16.28%;
+}
+
+.golfBtn {
+  top: 92%;
+  left: 30.56%;
+}
+
+.bowlingBtn {
+  top: 92%;
+  left: 44.84%;
+}
+
+.resetBtn {
+  top: 92%;
+  left: 59.12%;
+}
+
+.barrierBtn {
+  top: 92%;
+  left: 73.4%;
+}
+
+/* ---------------------------------------------------------- */
+
+.gamescreen {
+  width: 100%;
+  height: 90%;
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 10%;
+}
+
+.btn-mainMenu {
+  position: absolute;
+
+  left: 85.68%;
+  top: 92%;
+  font-family: system-ui, sans-serif;
+  cursor: pointer;
+  font-weight: bold;
+  /* border: none; // TODO: remove this because it is overwritten 2 lines down. rsmith */
+  text-align: center;
+  border: 3px solid #705d97;
+  border-radius: 6px;
+  white-space: nowrap;
+
+  font-size: 1.5em;
+}
+
+.btn-mainMenu:active,
+.btn-mainMenu:hover {
+  outline: 0;
+  box-shadow: rgba(255, 255, 255, 0.8) 0 15px 30px -5px;
+  border: 3px solid #1c142d;
+}
+/* Fullscreen styles */
+
+#canvas-container:-webkit-full-screen {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container:-moz-full-screen {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container:-ms-fullscreen {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container:fullscreen {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.game-over {
+  color: red;
+}
